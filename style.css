@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    height: 100vh;
+    background-image: linear-gradient(rgba(117, 113, 113, 0.2), rgba(82, 80, 80, 0.3)), url('/img/cloudy.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first, .inner-first, .info-first,
+.second, .second-right, .second-date, .detalii {
+    display: flex;
+}
+
+.first h1, .second-date, .inner-first, .info-first {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.first {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 40%;
+    padding: 5px 10px 0 20px;
+}
+
+.first h1{
+    font-size: 2rem;
+}
+
+.second {
+    height: 60%;
+    background: linear-gradient(rgba(142, 149, 189, 0.4), rgba(255,255,255, 0.4));
+    padding: 39px 10px 0 20px;
+}
+
+.second, .second-date {
+    flex-direction: column;
+}
+
+.second-right {
+    margin: 0 10px;
+    margin-bottom: 20px;
+}
+
+.second-right input {
+    width: 100%;
+    height: 40px;
+    margin-right: 10px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+
+.second-right input::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+.second-right button {
+    padding: 5px;
+    border: none;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.second-date {
+    margin: 0 10px;
+}
+
+
+.inner-first {
+    padding: 30px 0; 
+    align-items: end;
+}
+
+.inner-first #grd {
+    padding-right: 5px;
+    font-size: 2rem;
+}
+
+.info-first {
+    flex-direction: column;
+    padding: 0 5px;
+}
+
+.detalii {
+    justify-content: start;
+}
+
+
+@media (min-width: 992px) {
+    .main {
+        display: flex;
+    }
+    .first {
+        height: 100%;
+        width: 50%;
+    }
+
+    .second {
+        width: 50%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: linear-gradient(rgba(142, 149, 189, 0.4), rgba(255,255,255, 0.4));
+    }
+
+    .inner-first {
+        padding: 0;
+        margin-bottom: 200px;
+    }
+
+    .detalii {
+        margin-bottom: 100px;
+    }
+
+    .first h1 {
+        font-size: 3rem;
+        margin-top: 50px;
+    }
+
+    .inner-first #grd {
+        font-size: 3rem;
+    }
+
+    .info-first {
+        font-size: 1.1rem;
+        justify-content: center;
+    }
+}
